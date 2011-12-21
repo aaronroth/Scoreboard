@@ -37,7 +37,7 @@ function game_setup(players) {
                                   '<div class="nums">17</div>' +
                                   '<div class="nums">16</div>' +
                                   '<div class="nums">15</div>' +
-                                  '<div class="nums">BE</div>' +
+                                  '<div class="nums">Bull</div>' +
                               '</div>' +
                           '</div>' +
                      '</div>';
@@ -54,13 +54,13 @@ function game_setup(players) {
                             '<div class="score">0</div>' +
                         '</div>';
                         
-        var player_num_obj = '<div id="player' + i + 'header" class="player-headers">' + i +'</div>';
+        var player_num_obj = '<div id="player' + i + 'header" class="player-headers">Player ' + i +'</div>';
         
         scoreboard.children().first().append(player_num_obj);
         scoreboard.children().first().next().append(score_obj);
     }
     
-    var width = (players * 80) + 80;
+    var width = (players * 80) + 82;
     scoreboard.css('width', width);
                      
     $('body').append(scoreboard);

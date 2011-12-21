@@ -1,15 +1,21 @@
 #board-nums {
+    border-right: 2px solid #ffffff;
     float: left;
     height: 560px;
+    text-align: center;
     width: 80px;
 }
 
+body {
+    color: #ffffff;
+}
+
 #header {
+    border-bottom: 2px solid #ffffff;
     height: 20px;
 }
 
 #number-header {
-    background: yellow;
     float: left;
     height: 20px;
     width: 80px;
@@ -21,16 +27,16 @@
 }
 
 .player-headers {
-    background: blue;
     float: left;
     height: 20px;
+    text-align: center;
     width: 80px;
 }
 
 .player-scores {
-    background: red;
     float: left;
     height: 560;
+    text-align: center;
     width: 80px;
 }
 
@@ -40,8 +46,8 @@
 }
 
 #scoreboard {
-    background: green;
+    background: #005a40;
+    border-radius: 5px;
     height: 580px;
     margin: 10px auto 0px auto;
-    width: 100px;
 }
