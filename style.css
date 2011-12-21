@@ -1,2 +1,47 @@
-body {
+#board-nums {
+    float: left;
+    height: 560px;
+    width: 80px;
+}
+
+#header {
+    height: 20px;
+}
+
+#number-header {
+    background: yellow;
+    float: left;
+    height: 20px;
+    width: 80px;
+}
+
+.nums {
+    height: 80px;
+    width: 80px;
+}
+
+.player-headers {
+    background: blue;
+    float: left;
+    height: 20px;
+    width: 80px;
+}
+
+.player-scores {
+    background: red;
+    float: left;
+    height: 560;
+    width: 80px;
+}
+
+.score {
+    height: 80px;
+    width: 80px;
+}
+
+#scoreboard {
+    background: green;
+    height: 580px;
+    margin: 10px auto 0px auto;
+    width: 100px;
 }
