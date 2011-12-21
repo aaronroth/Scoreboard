@@ -2,26 +2,32 @@ $(document).ready(function() {
     var players = get_players();
     game_setup(players);
     $('.score').live('click', function() {
-       var curr_score = parseInt($(this).text());
+       var curr_score = parseInt($(this).children().first().text());
        if (curr_score != 3) {
-           $(this).text(curr_score + 1);
+           if (curr_score != 0) {
+               $(this).children().last().remove();
+           }
+           $(this).children().first().text(curr_score + 1);
+           $(this).append('<img src="' + (curr_score + 1) + '.png" />');
            check_if_winner($(this));
        }
     });
 });
 
 function check_if_winner(player_obj) {
-    var id = player_obj.parent().attr('id');
+    var player_string = player_obj.parent().attr('id');
+    var player = player_string.slice(6, 7);
     var score = 0;
     
     for (var i = 0; i < 7; i++) {
-        if (parseInt($('#' + id + ' > div').get(i).innerHTML) == 3) {
+        var span_score = player_obj.parent().find('span:eq(' + i + ')').text();
+        if (span_score == 3) {
             score += 1;
         }
     }
     
     if (score == 7) {
-        alert(id + ' won the game!');
+        alert('Player ' + player + ' won the game!');
     }
 }
 
@@ -37,7 +43,7 @@ function game_setup(players) {
                                   '<div class="nums">17</div>' +
                                   '<div class="nums">16</div>' +
                                   '<div class="nums">15</div>' +
-                                  '<div class="nums">Bull</div>' +
+                                  '<div id="bull-box" class="nums" style="padding:0px"><img id="bull" src="bull.png" /></div>' +
                               '</div>' +
                           '</div>' +
                      '</div>';
@@ -45,13 +51,13 @@ function game_setup(players) {
     scoreboard = $(scoreboard);
     for (var i = 1; i <= players; i++) {
         var score_obj = '<div id="player' + i + 'score" class="player-scores">' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
-                            '<div class="score">0</div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
+                            '<div class="score"><span>0</span></div>' +
                         '</div>';
                         
         var player_num_obj = '<div id="player' + i + 'header" class="player-headers">Player ' + i +'</div>';

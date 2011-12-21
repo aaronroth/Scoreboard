@@ -1,6 +1,8 @@
 #board-nums {
     border-right: 2px solid #ffffff;
     float: left;
+    font-size: 38pt;
+    font-weight: bolder;
     height: 560px;
     text-align: center;
     width: 80px;
@@ -8,11 +10,22 @@
 
 body {
     color: #ffffff;
+    font-family: Helvetica;
+}
+
+#bull {
+    height: 60px;
+    width: 60px;
+}
+
+#bull-box {
+    float: right;
+    margin: 0px 2px 0px 0px;
 }
 
 #header {
     border-bottom: 2px solid #ffffff;
-    height: 20px;
+    height: 25px;
 }
 
 #number-header {
@@ -22,13 +35,16 @@ body {
 }
 
 .nums {
-    height: 80px;
-    width: 80px;
+    height: 65px;
+    padding: 10px 5px 5px 5px;
+    width: 70px;
 }
 
 .player-headers {
     float: left;
+    font-weight: bolder;
     height: 20px;
+    padding: 4px 0px 2px 0px;
     text-align: center;
     width: 80px;
 }
@@ -45,9 +61,20 @@ body {
     width: 80px;
 }
 
+.score:hover {
+    background: #006b4c;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 #scoreboard {
     background: #005a40;
     border-radius: 5px;
-    height: 580px;
-    margin: 10px auto 0px auto;
+    box-shadow: 0 0 10px #888888;
+    height: 585px;
+    margin: 00px auto 0px auto;
+}
+
+span {
+    display: none;
 }
