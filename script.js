@@ -8,7 +8,7 @@ $(document).ready(function() {
                $(this).children().last().remove();
            }
            $(this).children().first().text(curr_score + 1);
-           $(this).append('<img src="' + (curr_score + 1) + '.png" />');
+           $(this).append('<img src="images/' + (curr_score + 1) + '.png" />');
            check_if_winner($(this));
        }
     });
@@ -43,7 +43,7 @@ function game_setup(players) {
                                   '<div class="nums">17</div>' +
                                   '<div class="nums">16</div>' +
                                   '<div class="nums">15</div>' +
-                                  '<div id="bull-box" class="nums" style="padding:0px"><img id="bull" src="bull.png" /></div>' +
+                                  '<div id="bull-box" class="nums" style="padding:0px"><img id="bull" src="images/bull.png" /></div>' +
                               '</div>' +
                           '</div>' +
                      '</div>';
